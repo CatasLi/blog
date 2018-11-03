@@ -1,0 +1,30 @@
+<!-- <p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p> -->
+<p>
+	"<%= comment.body %>"   By <strong><%= comment.commenter %></strong>
+</p>
+<!-- <div id = "datearea"></div>
+<script type="text/javascript">
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;   //+1
+  var getday = date.getDate();
+  var day = date.getDay();           //0-6
+  var weeks = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+  var week = weeks[day];
+  var mydate = year + "/" + month + "/" + getday + "(" + week + ")";
+  document.getElementById("datearea").innerHTML = "---" + mydate;
+</script> -->
+
+<p>
+  <%= link_to 'Delete', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
